@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opgave 1 - Leeftijd berekenen</title>
+</head>
+<body>
+
+	<script>
+		//variabelen aanmaken
+		var voornaam;
+		var achternaam;
+		var geboortejaar;
+		var leeftijd;
+		//gebruiker vragen stellen
+		voornaam = prompt("Wat is je voornaam?");
+		achternaam = prompt("Wat is je achternaam?");
+		geboortejaar = prompt("Wat is je geboortejaar?");
+		//leeftijd berekenen
+		
+		leeftijd = 2015 - geboortejaar;
+		//het antwoord tonen
+		alert("Hallo " + voornaam + " " + achternaam + " Volgens mijn berekening ben jij " +  leeftijd + " jaar oud");
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opgave 2 - Celsius naar Fahrenheit</title>
+</head>
+<body>
+	<script>
+		//variabelen aanmaken
+		var tempCelsius;
+		var tempFahrenheit;
+		//gebruiker vraag stellen
+		tempCelsius = prompt("Hoeveel graden celsius?");
+		//berekening uitvoeren
+		tempFahrenheit = (tempCelsius * 1.8) + 32;
+		//het antwoord tonen
+		alert(tempCelsius + " graden celsius is " + tempFahrenheit + " graden fahrenheit");
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opgave 3 - Wedstrijd uitslag</title>
+</head>
+<body>
+<script>
+		//variabelen aanmaken
+		var scoreTeam1;
+		var scoreTeam2;
+		//gebruiker vraag stellen
+		scoreTeam1 = prompt("Score van team1?");
+		scoreTeam2 = prompt("Score van team2?");
+		
+		//als score van team1 groter is dan de score van team2
+		if(scoreTeam1 > scoreTeam2){
+			alert("Team1 wint");
+		} else if(scoreTeam1 < scoreTeam2){
+			alert("Team2 wint");
+		} else{
+			alert("Gelijkspel");
+		}
+	</script>
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opgave 3 - Bezorgkosten of niet?</title>
+</head>
+<body>
+	<script>
+		//variabelen aanmaken
+		var aankoopbedrag;
+		var totaalbedrag;
+		//gebruiker aankoopbedrag vragen
+		aankoopbedrag = prompt("Wat is het aankoopbedrag?", "vul hier het aankoopbedrag in");
+		//met typeof() functie kan je zien dat input van prompt van het type string (tekst) is
+		alert(typeof(aankoopbedrag));
+		
+		//met parseFloat omzetten naar het type number (getal)
+		aankoopbedrag = parseFloat(aankoopbedrag);
+		//nu is het type number geworden
+		alert(typeof(aankoopbedrag));
+		//als aankoopbedrag hoger is of gelijk aan 25
+		if(aankoopbedrag >= 25){
+			//gratis bezorgen
+			alert("Gratis bezorgen!");
+		} else {
+		//anders
+			//3.95 erbij
+			totaalbedrag = aankoopbedrag + 3.95
+			alert("Het totaalbedrag incl bezorgkosten is " + totaalbedrag);
+		}
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opgave 1 - Welk woord is langer?</title>
+</head>
+<body>
+	<!-- Maak een <button> die de functie vergelijkWoorden() aanroept -->
+	<input type="button" value="klik hier" onclick="vergelijkWoorden()" >
+	
+	<script>
+	//Maak een functie genaamd vergelijkWoorden
+	var vergelijkWoorden = function(){
+		//Vraag via de prompt() de twee woorden
+		var woord1 = prompt("woord1?");
+		var woord2 = prompt("woord2?");
+		//Vergelijk de twee woorden met .length
+		if(woord1.length > woord2.length){
+			//Geef terug aan de gebruiker via een alert() welk woord het langst was en uit hoeveel letters het woord bestond
+			alert("Woord 1 is het langst en bevat" + woord1.length + " letters.");
+		} else {
+			alert("Woord 2 is het langst en bevat" + woord2.length + " letters.");
+		}
+	}	
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opgave 2 - BMI berekenen</title>
+</head>
+<body>
+	<!-- Maak een <button> die de functie berekenBMI() aanroept -->
+	<input type="button" value="klik hier" onclick="berekenBMI()" >
+	
+	<script>
+	//Maak een functie genaamd berekenBMI()
+	var berekenBMI = function(){
+		//Vraag via de prompt() de benodigde waarden (zie Wikipedia pagina)
+		var gewicht = prompt("gewicht? (in kg)");
+		var lengte = prompt("lengte? (in cm)");
+		gewicht = parseFloat(gewicht);
+		lengte = parseFloat(lengte)/100;
+		var bmi = gewicht / (lengte * lengte);
+		//Geef terug aan de gebruiker via een alert()of de gebruiker overgewicht heeft
+		if(bmi < 18.5){
+			alert("ondergewicht");
+		} else if(bmi < 25){
+			alert("normaal gewicht");
+		} else if(bmi < 27){
+			alert("licht overgewicht");
+		} else if(bmi < 30){
+			alert("matig overgewicht");
+		} else if(bmi < 40){
+			alert("ernstig overgewicht");
+		} else {
+			alert("ziekelijk overgewicht");
+		}
+		
+	}
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opgave 3 - Wachtwoord hetzelfde?</title>
+</head>
+<body>
+	<script>
+	//Maak een functie genaamd vergelijkWachtwoord met twee parameters
+	var vergelijkWachtwoord = function(ww1, ww2){
+		//In de functie vergelijkWachtwoord, vergelijk je het wachtwoord
+		if(ww1 == ww2){
+			//Geef met een alert terug op het klopt
+			alert("Klopt, wachtwoorden zijn gelijk");
+		} else {
+			alert("Fout, wachtwoorden zijn niet gelijk");
+		}
+	}
+	
+	//Maak twee variabelen aan 
+	var wachtwoord1 = "qwerty123";
+	var wachtwoord2 = "qwerty1223";
+	
+	//en gebruik deze als parameter (bij het aanroepen van de functie)
+	vergelijkWachtwoord(wachtwoord1, wachtwoord2);
+	</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opgave 4 - Welk woord is langer? - part 2</title>
+	<style>
+	/* css commentaar */
+	label, input { display: block;}
+	
+	input[type="button"]{margin-top:20px;}
+	</style>
+</head>
+<body>
+	<!-- Maak nu een formulier en gebruik jouw functie -->
+	<form>
+		<label for="woord1">Woord1:</label>
+		<input type="text" id="woord1" name="woord1">
+		
+		<label for="woord2">Woord2:</label>
+		<input type="text" id="woord2" name="woord2">	
+
+		<input type="button" value="woorden vergelijken" onclick="vergelijkWoorden()">
+	</form>
+
+	<script>
+	//voeg commentaar toe (in eigen woorden)
+	var vergelijkWoorden = function(){
+	
+		woord1 = document.getElementById('woord1').value;
+		woord2 = document.getElementById('woord2').value;
+	
+		if( woord1.length == woord2.length){
+			document.write("<p>De woorden zijn even lang en bevatten  " + woord2.length + " letters.</p>");
+			
+		} else if ( woord1.length > woord2.length){
+			document.write("<p>Woord1 is het langst en bevat " + woord1.length + " letters.</p>");
+			
+		} else {
+			document.write("<p>Woord2 is het langst en bevat " + woord2.length + " letters.</p>");
+		}
+	}
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opgave 5 - Valuta berekenen</title>
+	<style>
+		/* voeg zelf commentaar toe */
+		label, input {display: block;}
+		input[type="button"]{margin-top:20px;}
+		#omgerekend {font-size: 40px;}
+	</style>
+</head>
+<body>
+	<!-- Maak nu een formulier en gebruik jouw functie -->
+	<form id="valutaForm" name="valutaForm">
+		<label for="euros">Euros:</label>
+		<input type="number" id="euros" name="euros">
+		
+		
+		<label for="valuta">Valuta (dollar, peso, yen of pond typen):</label>
+		<input type="text" id="valuta" name="valuta">
+
+		<input type="button" value="Valuta omrekenen" onclick="valutaBerekenen()" />
+	</form>
+	<p id="omgerekend"> <!-- hier komt het antwoord --> </p>
+
+
+	<script>
+	
+	var dollar = 1.08;
+	var peso = 18.06;
+	var yen = 132.04;
+	var pond = 0.71;
+	var valutaBerekenen = function(){
+		
+		var euros = document.getElementById('euros').value;
+		var valuta = document.getElementById('valuta').value;
+		if(valuta == "dollar"){euros = euros * dollar}
+		if(valuta == "peso"){euros = euros * peso;}
+		if(valuta == "yen"){euros = euros * yen;}
+		if(valuta == "pond"){euros = euros * pond;}
+        
+        document.getElementById('omgerekend').innerHTML = euros;
+    }
+	</script>
+</body>
+</html>
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Opgave 1</title>
+</head>
+<body>
+
+<script>
+	
+var uitspraken = ["'Ieder nadeel heb zijn voordeel.'<br>","'Als wij de bal hebben kunnen zij niet scoren.'<br>", "'Voordat ik een fout maak, maak ik die fout niet'<br>","'Je gaat het pas zien als je het door hebt.'<br>","'Als Italianen één kans krijgen, maken ze er twee.'<br>", "'Vaak moet er iets gebeuren voordat er iets gebeurt.'<br>"];
+//document.write("Eén voor één");
+//document.write(uitspraken[0]);
+//document.write(uitspraken[1]);
+//document.write(uitspraken[2]);
+//document.write(uitspraken[3]);
+//document.write(uitspraken[4]);
+//document.write(uitspraken[5]);
+//document.write("<br>");
+document.write('<strong>Hier demonstreer ik de <em>for-loop</em></strong><br>');
+for(var i = 0; i < uitspraken.length;i++){
+	document.write(uitspraken[i]);	
+}
+document.write('<br><strong>Hier demonstreer ik de <em>while-loop</em></strong><br>');
+var i = 0;
+while(i < uitspraken.length){
+	document.write(uitspraken[i]);		
+	i++;
+}
+document.write('<br><strong>Hier is de random quote van de dag</strong><br>');
+//random getal tussen 0.0000 en 0.9999
+//alert(Math.random());
+//random getal tussen tussen 0.000 en 4.9999
+//alert(Math.random()*5);
+//getallen afronden
+//alert(Math.round(Math.random()*5));
+document.write(uitspraken[Math.round(Math.random()*5)]);
+</script>
+
+</body>
+</html>
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Opgave 2</title>
+</head>
+<body>
+
+<script>
+	var spaans = ['uno','dos','tres','cuatro','cinco', 'seis', 'siete','ocho', 'nueve', 'diez']; 
+		
+	var invoer = prompt("Voer een cijfer in en ik vertaal het naar Spaans");
+	
+	
+	if (invoer > 10 || invoer < 1) {
+		alert("Dat getal weet ik nog niet");
+	} else {
+		uitvoer = spaans[invoer-1];
+		alert("Het Spaanse woord voor is het getal " + invoer + " is " + uitvoer);
+	}
+</script>
+
+</body>
+</html>
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Opgave 2 met formulier</title>
+</head>
+<body>
+<h1>Ik kan Spaans spreken</h1>
+<form>
+	<input type="number" id="invoer" name="invoer">	
+	<input type="button" id="knop" value="Geef spaans woord">
+</form>
+
+<script>
+var spaansSpreken = function(){
+	var spaans = ['uno','dos','tres','cuatro','cinco', 'seis', 'siete','ocho', 'nueve', 'diez']; 
+	var invoer = document.getElementById('invoer').value;
+	if (invoer > 10 || invoer < 1) {
+		alert("Dat getal weet ik nog niet");
+	} else {
+		uitvoer = spaans[invoer-1];
+		alert("Het Spaanse woord voor het getal " + invoer + " is " + uitvoer);
+	}
+}
+document.getElementById('knop').onclick = function(){
+	spaansSpreken();
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Opgave 3</title>
+
+</head>
+<body>
+<h1>Controleer je lotnummer</h1>
+<form>
+  <table>
+    <tr>
+      <td><label for="txt_lotnummer">Lotnummer:</label></td>
+      <td><input id="txt_lotnummer" name="txt_lotnummer" type="text" value=""></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="button" id="knop" value="controleer"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><textarea id="txt_uitkomst" name="txt_uitkomst" type="text" value=""></textarea></td>
+    </tr>
+  </table>
+</form>
+
+<script>
+  var winnendeLoten = ["123456","234567","345678","098765","876543"];
+  
+  var controleerLoten = function(){
+      var invoer = document.getElementById('txt_lotnummer').value;
+      var gewonnen = false;
+      for(var i = 0; i < winnendeLoten.length;i++){
+        if(invoer == winnendeLoten[i]){
+          gewonnen = true;
+          break;
+        }
+      }
+      if(gewonnen == true){
+        //alert("gewonne");
+        document.getElementById('txt_uitkomst').value = "Gewonnen!";
+      } else {
+        //alert("jammer joh");
+        document.getElementById('txt_uitkomst').value = "Jammer joh!";
+      }
+  }
+  document.getElementById('knop').onclick = function(){
+      controleerLoten();
+  }
+  
+</script>
+
+</body>
+</html>
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Opgave 4</title>
+</head>
+<body>
+
+<script>
+	var resultaat = [8,6,7,6,6.5,7.5]; 
+	var subtotaal = 0;
+	var eindcijfer = 0;
+	//zonder loop:
+	//resultaat[0]*0.1 +
+	//resultaat[1]*0.1 +
+	//resultaat[2]*0.1 +
+	//resultaat[3]*0.1 +
+	//resultaat[4]*0.1 +
+	//wat is constant? wat is variabel?
+	//bepaal start, eind(voorwaarde) en stapgrootte voor de loop
+	for(var i = 0; i < 5;i++ ){
+		subtotaal = subtotaal = resultaat[i]*0.1;	
+	}
+	eindcijfer = subtotaal + resultaat[5]*0.5
+	alert(eindcijfer);
+</script>
+
+</body>
+</html>
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML bewerken met Javascript</title>
+<style>
+	.groen {color: #00ff00;}
+</style>
+</head>
+<body>
+<ul>
+    <li>een</li>
+    <li>twee</li>
+    <li id="foo">dri</li>
+    <li>vier</li>
+    <li>vijf</li>
+</ul>
+<ol>
+    <li>een</li>
+    <li>twee</li>
+    <li>drie</li>
+    <li>vier</li>
+</ol>
+<script>
+//opgave 1
+document.getElementById('foo').innerHTML ="drie";
+//opgave 2
+//selecteer ol
+var olElement = document.getElementsByTagName('ol')[0];
+//creeer li-element
+var nieuwElement =  document.createElement('li');
+//li element vullen met de tekst "vijf"
+var tekst = document.createTextNode("vijf");
+//tekst koppelen aan nieuw li element
+nieuwElement.appendChild(tekst);
+//nieuw li element koppelen aan ol element
+olElement.appendChild(nieuwElement);
+//opgave 3
+//selecteer li in ul (querySelector)
+var eersteElement = document.querySelector('ul li');
+//creeer nieuw li-element
+var nieuwElement = document.createElement('li');
+//creeer nieuw textNode met de tekst "nul"
+var tekst = document.createTextNode("nul");
+//koppel textNode aan nieuw li-element
+nieuwElement.appendChild(tekst);
+//voeg nieuw element toe aan het begin
+eersteElement.parentNode.insertBefore(nieuwElement, eersteElement);
+//in jQuery heb je prepend() en append()
+//opgave 4
+//creeer een p-element
+var pElement = document.createElement('p');
+//creeer een textNode met tekst
+var tekst = document.createTextNode("Dit is een interessante tekst");
+//koppel tekst aan p-element
+pElement.appendChild(tekst);
+//koppel p-element aan body
+document.body.appendChild(pElement);
+//opgave 5
+//1px rand toevoegen aan pElement
+pElement.style.border = "1px solid black";
+//opgave 6
+//selecteer li met id foo
+var liElement = document.getElementById('foo');
+//verander id in derde
+liElement.id = "derde";
+//opgave 7
+//selecteer ol op tagname
+var olElement = document.getElementsByTagName('ol')[0];
+//koppel deze aan een class
+olElement.className = "groen";
+</script>
+</body>
+</html>
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML bewerken met jQuery</title>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<style>
+    .groen { color: #0F0;}
+</style>
+</head>
+<body>
+<ul>
+    <li>een</li>
+    <li>twee</li>
+    <li id="foo">dri</li>
+    <li>vier</li>
+    <li>vijf</li>
+</ul>
+<ol>
+    <li>een</li>
+    <li>twee</li>
+    <li>drie</li>
+    <li>vier</li>
+</ol>
+<script>
+//opgave 1
+$('#foo').html("drie");
+//opgave 2
+$('ol').append("<li>vijf</li>");
+//opgave 3
+$('ul').prepend("<li>nul</li>");
+//opgave 4
+$('body').append("<p>Dit is ook een interessante tekst</p>");
+//opgave 5
+$('p').css("border", "2px solid black");
+//opgave 6
+$('#foo').attr("id", "drie");
+//opgave 7
+$('ol').addClass("groen");
+//extra
+//voorbeeld van een event en effect in jQuery
+//als je op jet p-element klikt
+$('p').on('click', function(){
+    //klap dan de lijstjes in
+	$('ol, ul').slideToggle();
+});
+</script>
+</body>
+</html>
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8"><title>HTML bewerken vervolg</title>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<style>.groen { color: #0F0;}</style>
+</head>
+<body>
+<ul>
+    <li>een</li>
+    <li>twee</li>
+    <li id="foo">drie</li>
+    <li>vier</li>
+    <li>vijf</li>
+</ul>
+<ol>
+    <li>een</li>
+    <li>twee</li>
+    <li>drie</li>
+    <li>vier</li>
+    <li>vijf</li>
+</ol>
+<script>
+//opgave 1
+$('ol li, ul li').wrapInner("<span></span>");
+$('ol li, ul li').append('<img class="edit" src="edit.png" height="12" width="12"><img class="delete" src="delete.png" height="12" width="12">');
+//opgave 2
+$('ol, li').css("list-style", "none");
+$('li').css("padding", "10px");
+$('img').css("padding-left", "5px");
+//opgave 3
+//$('ol li img[src="delete.png"], ul li img[src="delete.png"]')...
+//maar met een class is het gemakkelijker
+$('.delete').on('click', function(){
+	$(this).parent().remove();
+});
+//opgave 4
+//$('ol li img[src="edit.png"], ul li img[src="edit.png"]')...
+//maar met een class is het gemakkelijker
+$('.edit').on('click', function(){
+	var tekst = prompt("tekst aanpassen", $(this).prev().text());
+	$(this).prev().text(tekst);
+});
+</script>
+</body>
+</html>
