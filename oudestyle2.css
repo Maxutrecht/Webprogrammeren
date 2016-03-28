@@ -1,0 +1,182 @@
+/* Gemaakt door Max*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #191919;
+}
+#menu{
+ 	background-color: #C64646;
+ 	width: 100vw;
+  height: 45px;
+}
+#menu img{
+ 	height: 40px;
+ 	padding-left: 10px;
+ 	padding-top: 2px;
+ 	float: left;
+ 	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#menu img:hover{
+  -webkit-transform:scale(1.05);
+    -moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+    -o-transform:scale(1.05);
+     transform:scale(1.05);
+}
+#menu h1{
+ 	font-size: 1.3em;
+ 	color: white;
+ 	font-weight: 300;
+ 	float: right;
+ 	padding: 10px;
+ 	margin: 0;
+}
+#menu p{
+ 	font-size: 1.3em;
+ 	color: white;
+ 	font-weight: 300;
+ 	float: left;
+ 	padding: 10px;
+ 	margin: 0;
+}
+#header{
+ 	background-color: black;
+ 	width: 100vw;
+	height: calc(100vh - 45px);
+  background-image: url("img/achtergrond.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#buiten{
+  width: 100vw;
+  margin: 0 auto;
+  height: 50px;
+}
+.signin {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 574px;
+  background-color: #ffffff;
+  margin: 0 auto 10px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.signin h1 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 2.3em;
+}
+.signin input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+.signin input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.signin input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #b9b9b9;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+.signIn {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+}
+.signin-submit {
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #C64646;
+}
+.signin-submit:hover {
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #800000;
+}
+.signin a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+}
+.signin a:hover {
+  opacity: 1;
+}
+#pf_foto{
+  width:50px;
+  height: 50px;
+  border-style: solid;
+  border-color: gray;
+  border-width: 0.5px;
+  margin-bottom: 10px;
+  float: left;
+  background-image: url('img/upload.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.7;
+}
+#uploadButton{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+#pf_foto:hover{
+  opacity: 1;
+}
+h5{
+  color: gray;
+  float: left;
+  margin-left: 5px;
+  font-weight: 300;
+}
+.signin-help {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+form p{
+	color: red;
+  font-size: 0.9vw;
+}
+form input{
+  border: 2px solid #dadada;
+  border-color: #dadada;
+}
+form input:focus{
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}

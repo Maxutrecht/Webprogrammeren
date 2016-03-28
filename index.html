@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<!--gemaakt door Max Tjebbes-->
+<html>
+<head>
+  <title>FamilyShare</title>
+  <meta name="keywords" content=""/>
+  <meta name="author" content="Max Tjebbes"/>
+  <meta name="description" content=""/>
+  <meta charset="UTF-8"/>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="oudestyle2.css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,800' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="magnific-popup.css">
+  <script src="jquery.magnific-popup.js"></script>
+</head>
+
+<body>
+  <div id="menu">
+    <img src="img/logo2.png"/>
+    <p>FamilyShare</p>
+  </div>
+  <div id="header">
+    <div id="buiten">
+    </div>
+        <div class="signin">
+          <h1 class="loginhide">Inloggen</h1>
+          <h1 class="signinhide">Registreer</h1><br>
+          <form>
+            <p id="gebruikersnaamleeg" class="loginhide">Gebruikersnaam moet ingevuld worden</p>
+            <p id="inlogfout" class="loginhide">Gebruikersnaam of wachtwoord is incorrect</p>
+            <p class="inlogtevaak">Deze computer is tijdelijk geblokkeerd vanwege teveel foute login pogingen</p>
+            <input type="text" name="user" class="loginhide" id="gebruikersnaam" placeholder="Username">
+            <p id="wachtwoordleeg">Wachtwoord moet ingevuld wordn</p>
+            <input type="password" class="loginhide" id="wachtwoord" name="pass" placeholder="Password">
+            <input type="submit" name="login" id="loginknop2" class="signIn loginhide signin-submit" value="Login">
+            <p class="inlogtevaak">Klik op 'Wachtwoord vergeten' om uw gegevens te achterhalen</p>
+
+
+            <p id="fout1" class="signinhide">Let op!</p>
+            <p id="fout2" class="signinhide">Je hebt je voornaam niet ingevuld!</p>
+            <p id="fout3" class="signinhide">Je hebt je achternaam niet ingevuld!</p>
+            <p id="fout4" class="signinhide">Je hebt geen gebruikersnaam opgegeven!</p>
+            <p id="fout5" class="signinhide">Je hebt geen wachtwoord ingevuld!</p>
+            <p id="fout6" class="signinhide">Je hebt je wachtwoord herhaling niet ingevuld!</p>
+            <p id="fout7" class="signinhide">Je hebt je e-mail niet ingevuld!</p>
+            <p id="username_bestaat" class="signinhide">Deze gebruikersnaam is bezet!</p>
+            <p id="password_hetzelfde" class="signinhide">Je wachtwoorden komen niet overeen!</p>
+            <p id="password_nummer" class="signinhide">Er is geen nummer in je wachtwoord, mét is veiliger!</p>
+            <input type="text" class="first_name signinhide" name="name" placeholder="Voornaam">
+            <input type="text" class="last_name signinhide" name="secName" placeholder="Achternaam">
+            <input type="text" name="user" class="user_name signinhide" placeholder="Gebruikersnaam">
+            <input type="password" class="pass_word signinhide" name="pass" placeholder="Wachtwoord">
+            <input type="password" class="sec_pass_word signinhide" name="secpass" placeholder="Herhaal wachtwoord">
+            <input type="text" class="e_mail signinhide" name="mail" placeholder="E-mail">
+            <div id="pf_foto" class="signinhide"><input id="uploadButton" type="button" class="signinhide" value=""><input type="file" name="myFileSelect" id="verborgen_file"></div> <h5 class="signinhide">Voeg een profielfoto toe</h5>
+            <input type="submit" name="signin" id="signinknop2" class="signIn signinhide signin-submit" value="Registreer">
+          </form>
+          <div class="signinhide signin-help">
+            <a id="loginknop" href="#">Inloggen</a>
+          </div>
+          <div class="loginhide signin-help">
+            <a id="signinknop" href="#">Registreer</a> • <a href="#">Wachtwoord vergeten</a>
+          </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<!--gemaakt door Max Tjebbes | D01-->
+<html>
+<head>
+  <title>FamilyShare | Berichten</title>
+  <meta name="keywords" content=""/>
+  <meta name="author" content="Max Tjebbes"/>
+  <meta name="description" content=""/>
+  <meta charset="UTF-8"/>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style2.css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,800' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="magnific-popup.css">
+  <script src="jquery.magnific-popup.js"></script>
+</head>
+<body>
+  <div id="sideMenu">
+      <div id="profiel">
+        <a href="profiel.html">
+        <span></span>
+      </a>
+        <img src="img/pf.jpg"/>
+        <h1>Margreet Bosma</h1>
+      </div>
+    <a href="friends.html"><div id="friends" class="stat">
+      <h1>Vrienden:</h1>
+      <p>4</p>
+    </div></a>
+    <div id="followers" class="stat">
+      <h1>Volgers:</h1>
+      <p>3</p>
+    </div>
+    <div id="tussennav">
+    </div>
+    <a href="home.html"><div class="nav nav1 home">
+      <h1>Home</h1>
+    </div></a>
+    <a href="messages.html"><div class="nav messages">
+      <h1>Berichten</h1>
+    </div></a>
+    <a href="stats.html"><div class="nav nav1 stats">
+      <h1>Favorieten</h1>
+    </div></a>
+    <a href="settings.html"><div class="nav settings">
+      <h1>Instellingen</h1>
+    </div></a>  
+  </div>
+  <div id="menu">
+    <a href="index.html"><img src="img/logo2.png"/></a>
+    <form method="get" id="search">
+      <input name="q" type="text" size="40" placeholder="Zoek..." />
+    </form>
+  </div>
+  <div id="inhoud">
+    <div id="vriendenlijst">
+      <div id="vrienden_bovenkant">
+        <h1 class="bovenkant_vrienden">Vrienden:</h1>
+      </div>
+      <h1 class="berichten_text" id="vriend_knop1">Dirk</h1>
+      <h1 class="berichten_text" id="vriend_knop2">Annet</h1>
+      <h1 class="berichten_text" id="vriend_knop3">Jan</h1>
+      <h1 class="berichten_text" id="vriend_knop4">Elisa</h1>
+    </div>
+    <div id="vrienden_bovenkant2">
+      <h1 id="welke_vriend_actief" class="bovenkant_vrienden"></h1>
+      </div>
+    <div id="bericht_vriend1">
+        <div id="soort_bericht_veld">
+          <p id="soort_bericht1">|Verstuur een bericht|</p>
+          <p id="soort_bericht2">|Verstuur een video|</p>
+          <p id="soort_bericht3">|Verstuur een foto|</p>
+        </div>
+        <input name="push" id="bericht_sturen" type="text" size="40" placeholder="Deel iets..." />
+        <p class="foutmelding" id="verdwijn_leeg_bericht">Je moet iets delen!</p>
+        <input name="push" id="youtube_bericht" type="text" size="40" placeholder="Kopieer youtube embed link hier" />
+        <input type="file" id="myFile2" class="verborgen_file3">
+        <button id="foto_bericht" type="button">Upload een foto</button>
+        <p class="foutmelding" id="verdwijn_leeg_bericht2">Je moet wel een foto uploaden</p>
+        <p class="foutmelding" id="verdwijn_leeg_bericht3">Je moet wel een video uploaden<br>Zie youtube embed tutorials</p>
+        <button id="berichtKnop" type="button">Stuur</button>
+        <button id="berichtKnop2" type="button">Stuur</button>
+        <button id="berichtKnop3" type="button">Stuur</button>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div id="berichten1">
+            <div class="push">
+              <div id="pushPersoon">
+                <h1 class="ander_bericht">Dirk:</h1>
+              </div>
+              <div class="pushTextStuk pushNummer">
+                <p class="pushNummer ander_bericht">Zzzz</p>
+              </div>
+            </div>
+            <div class="push">
+              <div id="pushPersoon">
+                <h1 class="ander_bericht">Dirk:</h1>
+              </div>
+              <div class="pushTextStuk pushNummer">
+                <p class="pushNummer ander_bericht">Ik ben moe haha, hoe is het met jou!</p>
+              </div>
+            </div>
+            <div class="push">
+              <div id="pushPersoon">
+                <h1>Martijn Garritsen:</h1>
+              </div>
+              <div class="pushTextStuk pushNummer">
+                <p class="pushNummer">Goed hoe is het metjou?</p>
+              </div>
+            </div>
+            <div class="push">
+              <div id="pushPersoon">
+                <h1 class="ander_bericht">Dirk:</h1>
+              </div>
+              <div class="pushTextStuk pushNummer">
+                <p class="pushNummer ander_bericht">Ja...moe</p>
+              </div>
+          </div>
+      </div>
+      <div id="berichten2">
+      </div>
+      <div id="berichten3">
+      </div>
+      <div id="berichten4">
+      </div>
+    </div>   
+  </div>
+</body>
+</html>
